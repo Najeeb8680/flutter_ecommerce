@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
+import 'package:flutter_ecommerce/components/horizontal_categories_list.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -19,7 +21,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   @override
   void initState() {
     super.initState();
@@ -129,6 +130,17 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         children: <Widget>[
           imageCarousel(),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text(
+              'Catgeories',
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          HorizontalCategoriesList(),
         ],
       ),
     );
